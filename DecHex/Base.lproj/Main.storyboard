@@ -30,7 +30,7 @@
                                 <animations/>
                                 <state key="normal" title="Dec 2 Hex"/>
                                 <connections>
-                                    <segue destination="xva-yL-Zn6" kind="show" id="sbo-cz-Qhr"/>
+                                    <segue destination="xva-yL-Zn6" kind="show" id="kbP-vX-f6A"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,7 +52,7 @@
         <!--Dec2 Hex View Controller-->
         <scene sceneID="SQA-sM-Wl8">
             <objects>
-                <viewController id="xva-yL-Zn6" customClass="Dec2HexViewController" sceneMemberID="viewController">
+                <viewController id="xva-yL-Zn6" customClass="Dec2HexViewController" customModule="DecHex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Uos-9y-K6Q"/>
                         <viewControllerLayoutGuide type="bottom" id="fyE-an-huR"/>
@@ -60,13 +60,56 @@
                     <view key="view" contentMode="scaleToFill" id="xsN-vA-kDU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Dec number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sY4-xh-Ekl">
+                                <rect key="frame" x="58" y="243" width="485" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eAB-Dc-tpo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjx-3g-WsH">
+                                <rect key="frame" x="272" y="172" width="57" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6ce-uI-FVX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.61410984850000006" green="0.61410984850000006" blue="0.61410984850000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEB-kj-c0r">
+                                <rect key="frame" x="270" y="322" width="59" height="62"/>
+                                <animations/>
+                                <state key="normal" title="Convert!"/>
+                                <connections>
+                                    <action selector="convert:" destination="xva-yL-Zn6" eventType="touchUpInside" id="yhu-13-xTl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mjx-3g-WsH" firstAttribute="centerX" secondItem="sY4-xh-Ekl" secondAttribute="centerX" id="6jx-7i-h0D"/>
+                            <constraint firstItem="mjx-3g-WsH" firstAttribute="top" secondItem="Uos-9y-K6Q" secondAttribute="bottom" constant="108" id="8jV-Xy-lXt"/>
+                            <constraint firstItem="fyE-an-huR" firstAttribute="top" secondItem="IEB-kj-c0r" secondAttribute="bottom" constant="216" id="GeA-5r-rqf"/>
+                            <constraint firstItem="mjx-3g-WsH" firstAttribute="trailing" secondItem="IEB-kj-c0r" secondAttribute="trailing" id="VGv-gK-p3t"/>
+                            <constraint firstItem="sY4-xh-Ekl" firstAttribute="top" secondItem="mjx-3g-WsH" secondAttribute="bottom" constant="50" id="cRZ-hl-H9D"/>
+                            <constraint firstItem="sY4-xh-Ekl" firstAttribute="leading" secondItem="xsN-vA-kDU" secondAttribute="leadingMargin" constant="38" id="p8p-cE-0zo"/>
+                            <constraint firstItem="IEB-kj-c0r" firstAttribute="top" secondItem="sY4-xh-Ekl" secondAttribute="bottom" constant="49" id="q7n-Ru-kYh"/>
+                            <constraint firstItem="mjx-3g-WsH" firstAttribute="centerX" secondItem="xsN-vA-kDU" secondAttribute="centerX" id="yYv-hJ-2yq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerDisplay" destination="mjx-3g-WsH" id="W2G-Qg-02Y"/>
+                        <outlet property="decInput" destination="sY4-xh-Ekl" id="hh0-8v-PCk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMB-kL-hag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="581" y="-723"/>
+            <point key="canvasLocation" x="654" y="-723"/>
         </scene>
         <!--Hex2 Dec View Controller-->
         <scene sceneID="lf2-2J-htt">
@@ -77,27 +120,30 @@
                         <viewControllerLayoutGuide type="bottom" id="kCk-CT-Mk9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="S1i-wg-hHS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Hex number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9y-o8-Yco">
-                                <rect key="frame" x="54" y="237" width="213" height="30"/>
+                                <rect key="frame" x="58" y="237" width="485" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Xet-9h-54u"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5Y-8N-6A9">
-                                <rect key="frame" x="132" y="166" width="57" height="21"/>
+                                <rect key="frame" x="272" y="166" width="57" height="21"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="mti-zc-v9X"/>
+                                    <constraint firstAttribute="height" constant="21" id="euY-9v-H3g"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.61410984848484851" green="0.61410984848484851" blue="0.61410984848484851" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlC-7P-T5K">
-                                <rect key="frame" x="130" y="316" width="59" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlC-7P-T5K">
+                                <rect key="frame" x="270" y="316" width="59" height="62"/>
                                 <animations/>
                                 <state key="normal" title="Convert!"/>
                                 <connections>
@@ -108,18 +154,16 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MlC-7P-T5K" firstAttribute="leading" secondItem="S1i-wg-hHS" secondAttribute="leadingMargin" constant="110" id="22G-sF-osg"/>
-                            <constraint firstItem="Q9y-o8-Yco" firstAttribute="centerX" secondItem="S1i-wg-hHS" secondAttribute="centerX" id="F18-hb-yTl"/>
-                            <constraint firstItem="kCk-CT-Mk9" firstAttribute="top" secondItem="MlC-7P-T5K" secondAttribute="bottom" constant="222" id="HHS-Nu-dK9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MlC-7P-T5K" secondAttribute="trailing" constant="111" id="Kmd-4b-m5n"/>
-                            <constraint firstItem="MlC-7P-T5K" firstAttribute="top" secondItem="Q9y-o8-Yco" secondAttribute="bottom" constant="49" id="P4W-0l-97h"/>
-                            <constraint firstItem="Q9y-o8-Yco" firstAttribute="leading" secondItem="S1i-wg-hHS" secondAttribute="leadingMargin" constant="38" id="jnS-8p-X2i"/>
-                            <constraint firstItem="Q9y-o8-Yco" firstAttribute="top" secondItem="c5Y-8N-6A9" secondAttribute="bottom" constant="50" id="qT0-7M-Nwl"/>
-                            <constraint firstItem="c5Y-8N-6A9" firstAttribute="top" secondItem="UXL-de-sor" secondAttribute="bottom" constant="102" id="s4i-Kw-X9Y"/>
-                            <constraint firstItem="c5Y-8N-6A9" firstAttribute="centerX" secondItem="Q9y-o8-Yco" secondAttribute="centerX" id="sRZ-EG-PW2"/>
+                            <constraint firstItem="c5Y-8N-6A9" firstAttribute="top" secondItem="UXL-de-sor" secondAttribute="bottom" constant="102" id="1vE-os-zL2"/>
+                            <constraint firstItem="MlC-7P-T5K" firstAttribute="centerX" secondItem="S1i-wg-hHS" secondAttribute="centerX" id="584-oU-CJq"/>
+                            <constraint firstItem="Q9y-o8-Yco" firstAttribute="leading" secondItem="S1i-wg-hHS" secondAttribute="leadingMargin" constant="38" id="NRP-Hz-9jK"/>
+                            <constraint firstItem="MlC-7P-T5K" firstAttribute="top" secondItem="Q9y-o8-Yco" secondAttribute="bottom" constant="49" id="V0l-G9-dc0"/>
+                            <constraint firstItem="Q9y-o8-Yco" firstAttribute="top" secondItem="c5Y-8N-6A9" secondAttribute="bottom" constant="50" id="Xbq-jk-fCe"/>
+                            <constraint firstItem="c5Y-8N-6A9" firstAttribute="centerX" secondItem="Q9y-o8-Yco" secondAttribute="centerX" id="dDe-qy-ukZ"/>
+                            <constraint firstItem="kCk-CT-Mk9" firstAttribute="top" secondItem="MlC-7P-T5K" secondAttribute="bottom" constant="222" id="pz9-7J-zxu"/>
+                            <constraint firstItem="c5Y-8N-6A9" firstAttribute="trailing" secondItem="MlC-7P-T5K" secondAttribute="trailing" id="rWb-NC-T9m"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="answerDisplay" destination="c5Y-8N-6A9" id="y7U-wN-lmq"/>
                         <outlet property="hexInput" destination="Q9y-o8-Yco" id="3d4-yL-J83"/>
@@ -127,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tsd-93-9xX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="536" y="72"/>
+            <point key="canvasLocation" x="-249" y="118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="98i-bx-dYI">

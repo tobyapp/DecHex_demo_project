@@ -45,32 +45,40 @@ class ConverterBrain {
     }
     
     
-    func decToHex(decNumber : Int) -> Int {
-        var counter = 0
-        //var hexArray : [Array]<>
-        var result = decNumber
-        while result != 0 {
-            result % 4
+    func decToHex(decNumber : String) -> String {
+        if let decNumber2 = Int(decNumber) {
+        var x = decNumber2
+        var y = decNumber2
+        var z = ""
+        while y != 0 {
+            x = y % 16
+            y = y / 16
+            switch x {
+            case 10:
+                z = z + "A"
+            case 11:
+                z = z + "B"
+            case 12:
+                z = z + "C"
+            case 13:
+                z = z + "D"
+            case 14:
+                z = z + "E"
+            case 15:
+                z = z + "F"
+            default:
+                z = z + String(x)
+            }
         }
-        
-        
-        
-    
-        //for index to decNumber {
-            
-            
-        //}
-        
-        
-        for index in 1...5 {
-            print("\(index) times 5 is \(index * 5)")
-        }
-        
-        
-        return(5)
-        
+        let zReversed = z.characters.reverse()
+        print(String(zReversed))
+        return(String(zReversed))
     }
     
+    else {
+    return("Error cannot convert to int")
+    }
+    }
     
     
     

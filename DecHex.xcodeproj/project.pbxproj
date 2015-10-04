@@ -16,6 +16,7 @@
 		528ADB171BBD756A000F0C5E /* DecHexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528ADB161BBD756A000F0C5E /* DecHexUITests.swift */; };
 		528ADB291BBD7DF1000F0C5E /* Hex2DecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528ADB281BBD7DF1000F0C5E /* Hex2DecViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		528ADB2D1BBD8459000F0C5E /* ConverterBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528ADB2C1BBD8459000F0C5E /* ConverterBrain.swift */; settings = {ASSET_TAGS = (); }; };
+		5292B73A1BC1863100781A85 /* Dec2HexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5292B7391BC1863100781A85 /* Dec2HexViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +51,8 @@
 		528ADB161BBD756A000F0C5E /* DecHexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecHexUITests.swift; sourceTree = "<group>"; };
 		528ADB181BBD756A000F0C5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		528ADB281BBD7DF1000F0C5E /* Hex2DecViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hex2DecViewController.swift; path = ../Hex2DecViewController.swift; sourceTree = "<group>"; };
-		528ADB2B1BBD7E2D000F0C5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = DecHex/Base.lproj/Dec2HexViewController.swift; sourceTree = "<group>"; };
 		528ADB2C1BBD8459000F0C5E /* ConverterBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterBrain.swift; sourceTree = "<group>"; };
+		5292B7391BC1863100781A85 /* Dec2HexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dec2HexViewController.swift; path = ../Dec2HexViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,12 +103,12 @@
 		528ADAF51BBD756A000F0C5E /* DecHex */ = {
 			isa = PBXGroup;
 			children = (
+				5292B7391BC1863100781A85 /* Dec2HexViewController.swift */,
 				528ADAF61BBD756A000F0C5E /* AppDelegate.swift */,
 				528ADAF81BBD756A000F0C5E /* ViewController.swift */,
 				528ADAFA1BBD756A000F0C5E /* Main.storyboard */,
 				528ADB2C1BBD8459000F0C5E /* ConverterBrain.swift */,
 				528ADB281BBD7DF1000F0C5E /* Hex2DecViewController.swift */,
-				528ADB2A1BBD7E2D000F0C5E /* Dec2HexViewController.swift */,
 				528ADAFD1BBD756A000F0C5E /* Assets.xcassets */,
 				528ADAFF1BBD756A000F0C5E /* LaunchScreen.storyboard */,
 				528ADB021BBD756A000F0C5E /* Info.plist */,
@@ -264,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				528ADAF91BBD756A000F0C5E /* ViewController.swift in Sources */,
+				5292B73A1BC1863100781A85 /* Dec2HexViewController.swift in Sources */,
 				528ADAF71BBD756A000F0C5E /* AppDelegate.swift in Sources */,
 				528ADB291BBD7DF1000F0C5E /* Hex2DecViewController.swift in Sources */,
 				528ADB2D1BBD8459000F0C5E /* ConverterBrain.swift in Sources */,
@@ -316,15 +318,6 @@
 				528ADB001BBD756A000F0C5E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		528ADB2A1BBD7E2D000F0C5E /* Dec2HexViewController.swift */ = {
-			isa = PBXVariantGroup;
-			children = (
-				528ADB2B1BBD7E2D000F0C5E /* Base */,
-			);
-			name = Dec2HexViewController.swift;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

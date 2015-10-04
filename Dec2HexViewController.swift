@@ -2,7 +2,7 @@
 //  Dec2HexViewController.swift
 //  DecHex
 //
-//  Created by Toby Applegate on 01/10/2015.
+//  Created by Toby Applegate on 04/10/2015.
 //  Copyright © 2015 Toby Applegate. All rights reserved.
 //
 
@@ -10,6 +10,23 @@ import UIKit
 
 class Dec2HexViewController: UIViewController {
 
+    var brain = ConverterBrain()
+    
+    @IBOutlet weak var answerDisplay: UILabel!
+    @IBOutlet weak var decInput: UITextField!
+    @IBAction func convert(sender: UIButton) {
+        convertDecToHex(decInput.text!)
+    }
+    
+    func convertDecToHex(decInput : String) {
+        print(decInput)
+        let convertedNumber = brain.decToHex(decInput)
+        print("The answer is \(convertedNumber)")
+        answerDisplay.text = String(convertedNumber)
+        
+    }
+        
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
