@@ -11,8 +11,6 @@ import UIKit
 class Hex2DecViewController: UIViewController {
 
     var brain = ConverterBrain()
-    
-    
 
     @IBOutlet weak var answerDisplay: UILabel!
     @IBOutlet weak var hexInput: UITextField!
@@ -23,8 +21,14 @@ class Hex2DecViewController: UIViewController {
     func convert(input : String) {
         print(input)
         let convertedNumber = brain.hexToDec(input)
-        print("The answer is \(convertedNumber)")
-        answerDisplay.text = String(convertedNumber)
+        if let answer = convertedNumber.result {
+            print("The answer is \(answer)")
+            answerDisplay.text = String(answer)
+        }
+        else if let message = convertedNumber.errorMessage {
+            print("The answer is \(message)")
+            answerDisplay.text = String(message)
+    }
     }
     override func viewDidLoad() {
         super.viewDidLoad()

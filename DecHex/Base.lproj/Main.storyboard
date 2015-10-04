@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="v3P-Mx-edu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="v3P-Mx-edu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -8,7 +8,6 @@
         <!--DecHex-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DecHex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -20,6 +19,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQR-K6-PhE">
                                 <rect key="frame" x="265" y="358" width="71" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Hex 2 Dec"/>
                                 <connections>
                                     <segue destination="EU9-T9-68N" kind="show" id="ZBI-Zd-6eR"/>
@@ -27,12 +27,14 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abI-VW-sYi">
                                 <rect key="frame" x="265" y="236" width="71" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Dec 2 Hex"/>
                                 <connections>
                                     <segue destination="xva-yL-Zn6" kind="show" id="sbo-cz-Qhr"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="abI-VW-sYi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="172" id="594-ZR-oiO"/>
@@ -43,6 +45,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="DecHex" id="8rg-rt-Gbe"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-84" y="-723"/>
         </scene>
@@ -57,6 +60,7 @@
                     <view key="view" contentMode="scaleToFill" id="xsN-vA-kDU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -78,11 +82,13 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Hex number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9y-o8-Yco">
                                 <rect key="frame" x="54" y="237" width="213" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5Y-8N-6A9">
                                 <rect key="frame" x="132" y="166" width="57" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="mti-zc-v9X"/>
                                 </constraints>
@@ -90,19 +96,23 @@
                                 <color key="textColor" red="0.61410984848484851" green="0.61410984848484851" blue="0.61410984848484851" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlC-7P-T5K">
-                                <rect key="frame" x="130" y="315" width="59" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlC-7P-T5K">
+                                <rect key="frame" x="130" y="316" width="59" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Convert!"/>
                                 <connections>
                                     <action selector="convertButton:" destination="EU9-T9-68N" eventType="touchUpInside" id="LKl-3B-QM6"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MlC-7P-T5K" firstAttribute="trailing" secondItem="c5Y-8N-6A9" secondAttribute="trailing" id="61S-6N-OYm"/>
+                            <constraint firstItem="MlC-7P-T5K" firstAttribute="leading" secondItem="S1i-wg-hHS" secondAttribute="leadingMargin" constant="110" id="22G-sF-osg"/>
                             <constraint firstItem="Q9y-o8-Yco" firstAttribute="centerX" secondItem="S1i-wg-hHS" secondAttribute="centerX" id="F18-hb-yTl"/>
-                            <constraint firstItem="MlC-7P-T5K" firstAttribute="top" secondItem="Q9y-o8-Yco" secondAttribute="bottom" constant="48" id="QHA-Am-DrK"/>
+                            <constraint firstItem="kCk-CT-Mk9" firstAttribute="top" secondItem="MlC-7P-T5K" secondAttribute="bottom" constant="222" id="HHS-Nu-dK9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MlC-7P-T5K" secondAttribute="trailing" constant="111" id="Kmd-4b-m5n"/>
+                            <constraint firstItem="MlC-7P-T5K" firstAttribute="top" secondItem="Q9y-o8-Yco" secondAttribute="bottom" constant="49" id="P4W-0l-97h"/>
                             <constraint firstItem="Q9y-o8-Yco" firstAttribute="leading" secondItem="S1i-wg-hHS" secondAttribute="leadingMargin" constant="38" id="jnS-8p-X2i"/>
                             <constraint firstItem="Q9y-o8-Yco" firstAttribute="top" secondItem="c5Y-8N-6A9" secondAttribute="bottom" constant="50" id="qT0-7M-Nwl"/>
                             <constraint firstItem="c5Y-8N-6A9" firstAttribute="top" secondItem="UXL-de-sor" secondAttribute="bottom" constant="102" id="s4i-Kw-X9Y"/>
@@ -127,6 +137,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="M94-4r-x7M">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

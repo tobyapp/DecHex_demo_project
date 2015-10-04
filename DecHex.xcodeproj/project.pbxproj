@@ -106,8 +106,8 @@
 				528ADAF81BBD756A000F0C5E /* ViewController.swift */,
 				528ADAFA1BBD756A000F0C5E /* Main.storyboard */,
 				528ADB2C1BBD8459000F0C5E /* ConverterBrain.swift */,
-				528ADB2A1BBD7E2D000F0C5E /* Dec2HexViewController.swift */,
 				528ADB281BBD7DF1000F0C5E /* Hex2DecViewController.swift */,
+				528ADB2A1BBD7E2D000F0C5E /* Dec2HexViewController.swift */,
 				528ADAFD1BBD756A000F0C5E /* Assets.xcassets */,
 				528ADAFF1BBD756A000F0C5E /* LaunchScreen.storyboard */,
 				528ADB021BBD756A000F0C5E /* Info.plist */,
@@ -500,6 +500,7 @@
 				528ADB1D1BBD756A000F0C5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		528ADB1E1BBD756A000F0C5E /* Build configuration list for PBXNativeTarget "DecHexTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +509,7 @@
 				528ADB201BBD756A000F0C5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		528ADB211BBD756A000F0C5E /* Build configuration list for PBXNativeTarget "DecHexUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +518,7 @@
 				528ADB231BBD756A000F0C5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
