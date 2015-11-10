@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="v3P-Mx-edu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="v3P-Mx-edu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -37,10 +37,10 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="abI-VW-sYi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="172" id="594-ZR-oiO"/>
-                            <constraint firstItem="lQR-K6-PhE" firstAttribute="top" secondItem="abI-VW-sYi" secondAttribute="bottom" constant="92" id="DoK-6p-9nd"/>
-                            <constraint firstItem="lQR-K6-PhE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S9Y-8g-OYs"/>
-                            <constraint firstItem="lQR-K6-PhE" firstAttribute="leading" secondItem="abI-VW-sYi" secondAttribute="leading" id="k5q-cF-cjY"/>
+                            <constraint firstItem="lQR-K6-PhE" firstAttribute="leading" secondItem="abI-VW-sYi" secondAttribute="leading" id="Ggs-Za-9Ra"/>
+                            <constraint firstItem="abI-VW-sYi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RMN-df-aFg"/>
+                            <constraint firstItem="abI-VW-sYi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="172" id="YwZ-3L-F6x"/>
+                            <constraint firstItem="lQR-K6-PhE" firstAttribute="top" secondItem="abI-VW-sYi" secondAttribute="bottom" constant="92" id="wQi-eX-2oh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="DecHex" id="8rg-rt-Gbe"/>
@@ -61,20 +61,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Dec number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sY4-xh-Ekl">
+                            <textField clipsSubviews="YES" contentMode="bottom" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Dec number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sY4-xh-Ekl">
                                 <rect key="frame" x="58" y="243" width="485" height="30"/>
                                 <animations/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" playsSound="YES" keyboardKey="YES"/>
+                                </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="eAB-Dc-tpo"/>
+                                    <constraint firstAttribute="height" constant="30" id="oeG-CA-yiI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardAppearance="alert"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjx-3g-WsH">
                                 <rect key="frame" x="272" y="172" width="57" height="21"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="6ce-uI-FVX"/>
+                                    <constraint firstAttribute="height" constant="21" id="UU6-vs-22c"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.61410984850000006" green="0.61410984850000006" blue="0.61410984850000006" alpha="1" colorSpace="calibratedRGB"/>
@@ -88,18 +91,31 @@
                                     <action selector="convert:" destination="xva-yL-Zn6" eventType="touchUpInside" id="yhu-13-xTl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maW-I8-eJx">
+                                <rect key="frame" x="277" y="414" width="46" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Y5L-Rf-fzx"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="warningmessage:" destination="xva-yL-Zn6" eventType="touchUpInside" id="slH-g3-Th2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mjx-3g-WsH" firstAttribute="centerX" secondItem="sY4-xh-Ekl" secondAttribute="centerX" id="6jx-7i-h0D"/>
-                            <constraint firstItem="mjx-3g-WsH" firstAttribute="top" secondItem="Uos-9y-K6Q" secondAttribute="bottom" constant="108" id="8jV-Xy-lXt"/>
-                            <constraint firstItem="fyE-an-huR" firstAttribute="top" secondItem="IEB-kj-c0r" secondAttribute="bottom" constant="216" id="GeA-5r-rqf"/>
-                            <constraint firstItem="mjx-3g-WsH" firstAttribute="trailing" secondItem="IEB-kj-c0r" secondAttribute="trailing" id="VGv-gK-p3t"/>
-                            <constraint firstItem="sY4-xh-Ekl" firstAttribute="top" secondItem="mjx-3g-WsH" secondAttribute="bottom" constant="50" id="cRZ-hl-H9D"/>
-                            <constraint firstItem="sY4-xh-Ekl" firstAttribute="leading" secondItem="xsN-vA-kDU" secondAttribute="leadingMargin" constant="38" id="p8p-cE-0zo"/>
-                            <constraint firstItem="IEB-kj-c0r" firstAttribute="top" secondItem="sY4-xh-Ekl" secondAttribute="bottom" constant="49" id="q7n-Ru-kYh"/>
-                            <constraint firstItem="mjx-3g-WsH" firstAttribute="centerX" secondItem="xsN-vA-kDU" secondAttribute="centerX" id="yYv-hJ-2yq"/>
+                            <constraint firstItem="mjx-3g-WsH" firstAttribute="centerX" secondItem="sY4-xh-Ekl" secondAttribute="centerX" id="3E7-JO-HU7"/>
+                            <constraint firstItem="IEB-kj-c0r" firstAttribute="top" secondItem="sY4-xh-Ekl" secondAttribute="bottom" constant="49" id="BSg-L5-2LY"/>
+                            <constraint firstItem="maW-I8-eJx" firstAttribute="centerX" secondItem="IEB-kj-c0r" secondAttribute="centerX" id="Dbn-YZ-DBC"/>
+                            <constraint firstItem="sY4-xh-Ekl" firstAttribute="top" secondItem="mjx-3g-WsH" secondAttribute="bottom" constant="50" id="H3W-KI-nNh"/>
+                            <constraint firstItem="maW-I8-eJx" firstAttribute="top" secondItem="IEB-kj-c0r" secondAttribute="bottom" constant="30" id="T9p-wE-Mib"/>
+                            <constraint firstItem="fyE-an-huR" firstAttribute="top" secondItem="maW-I8-eJx" secondAttribute="bottom" constant="156" id="TF5-EF-NvA"/>
+                            <constraint firstItem="mjx-3g-WsH" firstAttribute="top" secondItem="Uos-9y-K6Q" secondAttribute="bottom" constant="108" id="YSg-dy-Tp9"/>
+                            <constraint firstItem="maW-I8-eJx" firstAttribute="centerX" secondItem="xsN-vA-kDU" secondAttribute="centerX" id="bPa-qy-axf"/>
+                            <constraint firstItem="sY4-xh-Ekl" firstAttribute="leading" secondItem="xsN-vA-kDU" secondAttribute="leadingMargin" constant="38" id="dXr-qM-sey"/>
+                            <constraint firstItem="IEB-kj-c0r" firstAttribute="trailing" secondItem="mjx-3g-WsH" secondAttribute="trailing" id="n5l-6y-XDw"/>
                         </constraints>
                     </view>
                     <connections>

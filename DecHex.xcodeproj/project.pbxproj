@@ -14,9 +14,9 @@
 		528ADB011BBD756A000F0C5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528ADAFF1BBD756A000F0C5E /* LaunchScreen.storyboard */; };
 		528ADB0C1BBD756A000F0C5E /* DecHexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528ADB0B1BBD756A000F0C5E /* DecHexTests.swift */; };
 		528ADB171BBD756A000F0C5E /* DecHexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528ADB161BBD756A000F0C5E /* DecHexUITests.swift */; };
-		528ADB291BBD7DF1000F0C5E /* Hex2DecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528ADB281BBD7DF1000F0C5E /* Hex2DecViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		528ADB2D1BBD8459000F0C5E /* ConverterBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528ADB2C1BBD8459000F0C5E /* ConverterBrain.swift */; settings = {ASSET_TAGS = (); }; };
-		5292B73A1BC1863100781A85 /* Dec2HexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5292B7391BC1863100781A85 /* Dec2HexViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		528ADB291BBD7DF1000F0C5E /* Hex2DecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528ADB281BBD7DF1000F0C5E /* Hex2DecViewController.swift */; };
+		528ADB2D1BBD8459000F0C5E /* ConverterBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528ADB2C1BBD8459000F0C5E /* ConverterBrain.swift */; };
+		5292B73A1BC1863100781A85 /* Dec2HexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5292B7391BC1863100781A85 /* Dec2HexViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +201,7 @@
 				TargetAttributes = {
 					528ADAF21BBD756A000F0C5E = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = VAF4J635VX;
 					};
 					528ADB061BBD756A000F0C5E = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -408,10 +409,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DecHex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = applegate.DecHex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -419,10 +423,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DecHex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = applegate.DecHex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
