@@ -9,6 +9,7 @@
 import Foundation
 
 class ConverterBrain {
+    var memory = SharedSingleton()
     
     func hexToDec(hexNumber : String) -> (result: Int?, errorMessage: String?) {
         var power = 0
@@ -34,6 +35,7 @@ class ConverterBrain {
             case  "G", "g", "H", "h", "I", "i", "J", "j", "K", "k", "L", "l", "M", "m", "N",
             "n", "O", "o", "P", "p", "Q", "q", "R", "r", "S", "s", "T", "t", "U", "u", "V", "v", "W", "w", "X", "x", "Y", "y", "Z", "z":
                 return(nil, "ERROR - inputted incorrect hex value")
+                
             default:
                 break
             }
@@ -41,6 +43,7 @@ class ConverterBrain {
             total = total + (Int(numberString)! * powerOf)
             power++
         }
+        
         return(total, nil)
     }
     

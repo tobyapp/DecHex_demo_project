@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import WatchConnectivity
 
-class Dec2HexViewController: UIViewController {
-
+class Dec2HexViewController: UIViewController, WCSessionDelegate {
+    var memory = SharedSingleton() //tried to share data to watch through this class
     var brain = ConverterBrain()
+    let dataSession = WCSession.defaultSession()
     
-    @IBAction func warningmessage(sender: AnyObject) {
+    @IBAction func warningmessage(sender: AnyObject) { //testing alertController
                         let alertController = UIAlertController(
                             title: "test title, hey that they both start with a 'T'",
                             message: "shouldnt have pressed this button...",
@@ -34,39 +36,47 @@ class Dec2HexViewController: UIViewController {
             }
         }
         alertController.addAction(openAction)
-
-        
-                            self.presentViewController(alertController, animated: true, completion: nil)
-                    
-                            print("done")
-        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        print("done with alert controller")
     }
+    
     @IBOutlet weak var answerDisplay: UILabel!
     @IBOutlet weak var decInput: UITextField!
     @IBAction func convert(sender: UIButton) {
+        memory.originalNumber = "\(decInput.text)" //testing shared data through sharedsingleton class
         convertDecToHex(decInput.text!)
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        dataSession.delegate = self
+        dataSession.activateSession() //ready to reciev messages from counterpart (may not be nessassery as not sending messages back)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     func convertDecToHex(decInput : String) {
         print(decInput)
         let convertedNumber = brain.decToHex(decInput)
         print("The answer is \(convertedNumber)")
-        answerDisplay.text = String(convertedNumber)
         
+        let stringOfConvertedNumber = String(convertedNumber) //testing shared data through sharedsingleton class
+        memory.newHexNumber = stringOfConvertedNumber //testing shared data through sharedsingleton class
+        
+        answerDisplay.text = stringOfConvertedNumber
+        
+        let message = [ "number": stringOfConvertedNumber ]
+        dataSession.sendMessage(message, replyHandler: nil, errorHandler: nil)
+        //replyhandler set to nil as dont want to recieve reply, same with erorr handler
     }
         
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       
+    
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
     /*
