@@ -15,9 +15,7 @@
 		52330DB31BF27F4B00DA26AB /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52330DB21BF27F4B00DA26AB /* ExtensionDelegate.swift */; };
 		52330DB51BF27F4B00DA26AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52330DB41BF27F4B00DA26AB /* Assets.xcassets */; };
 		52330DB91BF27F4B00DA26AB /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 52330D9F1BF27F4B00DA26AB /* Watch.app */; };
-		52330DC41BF2820400DA26AB /* Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52330DC31BF2820400DA26AB /* Logo@2x.png */; };
 		528ADAF71BBD756A000F0C5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528ADAF61BBD756A000F0C5E /* AppDelegate.swift */; };
-		528ADAF91BBD756A000F0C5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528ADAF81BBD756A000F0C5E /* ViewController.swift */; };
 		528ADAFC1BBD756A000F0C5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528ADAFA1BBD756A000F0C5E /* Main.storyboard */; };
 		528ADAFE1BBD756A000F0C5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528ADAFD1BBD756A000F0C5E /* Assets.xcassets */; };
 		528ADB011BBD756A000F0C5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528ADAFF1BBD756A000F0C5E /* LaunchScreen.storyboard */; };
@@ -26,6 +24,12 @@
 		528ADB291BBD7DF1000F0C5E /* Hex2DecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528ADB281BBD7DF1000F0C5E /* Hex2DecViewController.swift */; };
 		528ADB2D1BBD8459000F0C5E /* ConverterBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528ADB2C1BBD8459000F0C5E /* ConverterBrain.swift */; };
 		5292B73A1BC1863100781A85 /* Dec2HexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5292B7391BC1863100781A85 /* Dec2HexViewController.swift */; };
+		52B4AAAC1BF3DB2900C984E6 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAAB1BF3DB2900C984E6 /* Icon-40@2x.png */; };
+		52B4AAAE1BF3DB3C00C984E6 /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAAD1BF3DB3C00C984E6 /* Icon-40@3x.png */; };
+		52B4AAB01BF3DB4000C984E6 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAAF1BF3DB4000C984E6 /* Icon-60@2x.png */; };
+		52B4AAB21BF3DB4400C984E6 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAB11BF3DB4400C984E6 /* Icon-60@3x.png */; };
+		52B4AAB41BF3DB4700C984E6 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAB31BF3DB4700C984E6 /* Icon-Small@2x.png */; };
+		52B4AAB61BF3DB4A00C984E6 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAB51BF3DB4A00C984E6 /* Icon-Small@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,8 +91,6 @@
 /* Begin PBXFileReference section */
 		520472021BF29ED200D56292 /* SharedSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedSingleton.swift; sourceTree = "<group>"; };
 		520472081BF2A63A00D56292 /* WatchInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchInterfaceController.swift; sourceTree = "<group>"; };
-		520795D51BF2AEA80097588F /* Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Watch Extension.entitlements"; sourceTree = "<group>"; };
-		520795D61BF2AF730097588F /* DecHex.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DecHex.entitlements; sourceTree = "<group>"; };
 		52330D9F1BF27F4B00DA26AB /* Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52330DA21BF27F4B00DA26AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		52330DA41BF27F4B00DA26AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,10 +99,8 @@
 		52330DB21BF27F4B00DA26AB /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		52330DB41BF27F4B00DA26AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52330DB61BF27F4B00DA26AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52330DC31BF2820400DA26AB /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Logo@2x.png"; path = "../../../../../Downloads/Logo@2x.png"; sourceTree = "<group>"; };
 		528ADAF31BBD756A000F0C5E /* DecHex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecHex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528ADAF61BBD756A000F0C5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		528ADAF81BBD756A000F0C5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		528ADAFB1BBD756A000F0C5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		528ADAFD1BBD756A000F0C5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		528ADB001BBD756A000F0C5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,6 +114,12 @@
 		528ADB281BBD7DF1000F0C5E /* Hex2DecViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hex2DecViewController.swift; path = ../Hex2DecViewController.swift; sourceTree = "<group>"; };
 		528ADB2C1BBD8459000F0C5E /* ConverterBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterBrain.swift; sourceTree = "<group>"; };
 		5292B7391BC1863100781A85 /* Dec2HexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dec2HexViewController.swift; path = ../Dec2HexViewController.swift; sourceTree = "<group>"; };
+		52B4AAAB1BF3DB2900C984E6 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-40@2x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-40@2x.png"; sourceTree = "<group>"; };
+		52B4AAAD1BF3DB3C00C984E6 /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-40@3x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-40@3x.png"; sourceTree = "<group>"; };
+		52B4AAAF1BF3DB4000C984E6 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-60@2x.png"; sourceTree = "<group>"; };
+		52B4AAB11BF3DB4400C984E6 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@3x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-60@3x.png"; sourceTree = "<group>"; };
+		52B4AAB31BF3DB4700C984E6 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		52B4AAB51BF3DB4A00C984E6 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@3x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-Small@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,11 +167,9 @@
 		52330DAF1BF27F4B00DA26AB /* Watch Extension */ = {
 			isa = PBXGroup;
 			children = (
-				520795D51BF2AEA80097588F /* Watch Extension.entitlements */,
 				52330DB21BF27F4B00DA26AB /* ExtensionDelegate.swift */,
 				52330DB41BF27F4B00DA26AB /* Assets.xcassets */,
 				520472081BF2A63A00D56292 /* WatchInterfaceController.swift */,
-				52330DC31BF2820400DA26AB /* Logo@2x.png */,
 				52330DB61BF27F4B00DA26AB /* Info.plist */,
 			);
 			path = "Watch Extension";
@@ -180,6 +184,7 @@
 				52330DA01BF27F4B00DA26AB /* Watch */,
 				52330DAF1BF27F4B00DA26AB /* Watch Extension */,
 				528ADAF41BBD756A000F0C5E /* Products */,
+				52B4AAAA1BF3DAD600C984E6 /* images */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,16 +203,14 @@
 		528ADAF51BBD756A000F0C5E /* DecHex */ = {
 			isa = PBXGroup;
 			children = (
-				520795D61BF2AF730097588F /* DecHex.entitlements */,
 				5292B7391BC1863100781A85 /* Dec2HexViewController.swift */,
 				520472021BF29ED200D56292 /* SharedSingleton.swift */,
 				528ADAF61BBD756A000F0C5E /* AppDelegate.swift */,
-				528ADAF81BBD756A000F0C5E /* ViewController.swift */,
 				528ADAFA1BBD756A000F0C5E /* Main.storyboard */,
 				528ADB2C1BBD8459000F0C5E /* ConverterBrain.swift */,
 				528ADB281BBD7DF1000F0C5E /* Hex2DecViewController.swift */,
-				528ADAFD1BBD756A000F0C5E /* Assets.xcassets */,
 				528ADAFF1BBD756A000F0C5E /* LaunchScreen.storyboard */,
+				528ADAFD1BBD756A000F0C5E /* Assets.xcassets */,
 				528ADB021BBD756A000F0C5E /* Info.plist */,
 			);
 			path = DecHex;
@@ -229,6 +232,20 @@
 				528ADB181BBD756A000F0C5E /* Info.plist */,
 			);
 			path = DecHexUITests;
+			sourceTree = "<group>";
+		};
+		52B4AAAA1BF3DAD600C984E6 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				52B4AAAB1BF3DB2900C984E6 /* Icon-40@2x.png */,
+				52B4AAAD1BF3DB3C00C984E6 /* Icon-40@3x.png */,
+				52B4AAAF1BF3DB4000C984E6 /* Icon-60@2x.png */,
+				52B4AAB11BF3DB4400C984E6 /* Icon-60@3x.png */,
+				52B4AAB31BF3DB4700C984E6 /* Icon-Small@2x.png */,
+				52B4AAB51BF3DB4A00C984E6 /* Icon-Small@3x.png */,
+			);
+			name = images;
+			path = DecHex;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,7 +359,7 @@
 						DevelopmentTeam = VAF4J635VX;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -351,7 +368,7 @@
 						DevelopmentTeam = VAF4J635VX;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -402,7 +419,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				52330DB51BF27F4B00DA26AB /* Assets.xcassets in Resources */,
-				52330DC41BF2820400DA26AB /* Logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,8 +427,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				528ADB011BBD756A000F0C5E /* LaunchScreen.storyboard in Resources */,
+				52B4AAAC1BF3DB2900C984E6 /* Icon-40@2x.png in Resources */,
 				528ADAFE1BBD756A000F0C5E /* Assets.xcassets in Resources */,
+				52B4AAB61BF3DB4A00C984E6 /* Icon-Small@3x.png in Resources */,
 				528ADAFC1BBD756A000F0C5E /* Main.storyboard in Resources */,
+				52B4AAB21BF3DB4400C984E6 /* Icon-60@3x.png in Resources */,
+				52B4AAB41BF3DB4700C984E6 /* Icon-Small@2x.png in Resources */,
+				52B4AAAE1BF3DB3C00C984E6 /* Icon-40@3x.png in Resources */,
+				52B4AAB01BF3DB4000C984E6 /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +468,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528ADAF91BBD756A000F0C5E /* ViewController.swift in Sources */,
 				5292B73A1BC1863100781A85 /* Dec2HexViewController.swift in Sources */,
 				528ADAF71BBD756A000F0C5E /* AppDelegate.swift in Sources */,
 				528ADB291BBD7DF1000F0C5E /* Hex2DecViewController.swift in Sources */,
@@ -527,7 +548,7 @@
 		52330DBB1BF27F4B00DA26AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Watch Extension/Watch Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Watch Extension/Info.plist";
@@ -545,7 +566,7 @@
 		52330DBC1BF27F4B00DA26AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Watch Extension/Watch Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Watch Extension/Info.plist";
@@ -681,7 +702,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DecHex/DecHex.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DecHex/Info.plist;
@@ -696,7 +716,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DecHex/DecHex.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DecHex/Info.plist;

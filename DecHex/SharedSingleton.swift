@@ -8,6 +8,9 @@
 
 import Foundation
 
+//test singleton class to share data among apps, used WatchConnectivity kit instead
+//idea was to try and create object and pass it among classes, used differernt method instead
+//kept file in here for refference
 
 class SharedSingleton {
     var originalNumber: String?

@@ -10,21 +10,21 @@ import UIKit
 import WatchConnectivity
 
 class Dec2HexViewController: UIViewController, WCSessionDelegate {
-    var memory = SharedSingleton() //tried to share data to watch through this class
     var brain = ConverterBrain()
     let dataSession = WCSession.defaultSession()
     
-    @IBAction func warningmessage(sender: AnyObject) { //testing alertController
+    //testing alertController with differernt actions
+    @IBAction func warningmessage(sender: AnyObject) {
                         let alertController = UIAlertController(
                             title: "test title, hey that they both start with a 'T'",
                             message: "shouldnt have pressed this button...",
                             preferredStyle: .Alert)
                         let cancelAction = UIAlertAction(
-                            title: "meh",
+                            title: "Ignore",
                             style: UIAlertActionStyle.Destructive,
                             handler: nil)
                         let otherAction = UIAlertAction(
-                            title: "other",
+                            title: "Acknowledge (does nothing)",
                             style: UIAlertActionStyle.Default,
                             handler: {action in print("confirm was tapped")})
                         alertController.addAction(cancelAction)
@@ -40,19 +40,18 @@ class Dec2HexViewController: UIViewController, WCSessionDelegate {
         print("done with alert controller")
     }
     
+    //define outlets
     @IBOutlet weak var answerDisplay: UILabel!
     @IBOutlet weak var decInput: UITextField!
     @IBAction func convert(sender: UIButton) {
-        memory.originalNumber = "\(decInput.text)" //testing shared data through sharedsingleton class
         convertDecToHex(decInput.text!)
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         dataSession.delegate = self
-        dataSession.activateSession() //ready to reciev messages from counterpart (may not be nessassery as not sending messages back)
+        dataSession.activateSession() //ready to recieve messages from counterpart (may not be nessassery as not sending messages back)
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,33 +59,18 @@ class Dec2HexViewController: UIViewController, WCSessionDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func convertDecToHex(decInput : String) {
-        print(decInput)
-        let convertedNumber = brain.decToHex(decInput)
+    func convertDecToHex(decInputFromUI : String) {
+        print(decInputFromUI)
+        let convertedNumber = brain.decToHex(decInputFromUI)
         print("The answer is \(convertedNumber)")
-        
-        let stringOfConvertedNumber = String(convertedNumber) //testing shared data through sharedsingleton class
-        memory.newHexNumber = stringOfConvertedNumber //testing shared data through sharedsingleton class
-        
-        answerDisplay.text = stringOfConvertedNumber
-        
-        let message = [ "number": stringOfConvertedNumber ]
+        let stringOfAnswer = String(convertedNumber)
+        answerDisplay.text = stringOfAnswer
+        sendMessageToWatch(decInputFromUI, convertedDecNumber: stringOfAnswer)
+    }
+    func sendMessageToWatch(decInputFromUI : String, convertedDecNumber : String) {
+        let message = [ "originalNumber": decInputFromUI, "newDecNumber": "", "newHexNumber": convertedDecNumber]
         dataSession.sendMessage(message, replyHandler: nil, errorHandler: nil)
         //replyhandler set to nil as dont want to recieve reply, same with erorr handler
     }
-        
-    
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
