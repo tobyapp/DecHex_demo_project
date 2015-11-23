@@ -1,2 +1,2 @@
 # DecHex_demo_project
-demo project to test differnt iOS functionality 
+demo project to test different iOS functionality 
