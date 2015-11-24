@@ -54,7 +54,7 @@ class FacebookData {
                         if let pageLiked = subJson["created_time"].string {
                             fbDataStore.pageLiked = pageName
                             fbDataStore.likeDate = pageLiked
-                            
+                            //print(fbDataStore.pageLiked)
                             //print("name of page:  \(pageName)")
                             //print("date joined :  \(pageLiked)")
                         }

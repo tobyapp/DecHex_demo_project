@@ -250,10 +250,10 @@
             </objects>
             <point key="canvasLocation" x="-1807" y="-762"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Facebook Data Table View Controller-->
         <scene sceneID="kIV-lm-Hsa">
             <objects>
-                <tableViewController id="Haa-QU-NLY" sceneMemberID="viewController">
+                <tableViewController id="Haa-QU-NLY" customClass="FacebookDataTableViewController" customModule="DecHex" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9qu-wy-utO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

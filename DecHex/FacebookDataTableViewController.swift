@@ -13,17 +13,15 @@ class FacebookDataTableViewController: UITableViewController {
     
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
-    let dataFetch  = NSFetchRequest(entityName: "FbData")
+    
+    var pagesLikedData = [FbData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        do {
-            let fetchResults = try self.managedObjectContext.executeFetchRequest(dataFetch) as! [FbData]
-            print(fetchResults[0].pageLiked)
-        }   catch let error as NSError {
-            print("Fetch failed: \(error.localizedDescription)")
-            }
+        fetchData()
+        print("in super did load")
+        
         
 
         // Uncomment the following line to preserve selection between presentations
@@ -36,6 +34,7 @@ class FacebookDataTableViewController: UITableViewController {
         
         // Print it to the console
         print(managedObjectContext)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,19 +51,38 @@ class FacebookDataTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        print("pagesliked.count     :       \(pagesLikedData.count)")
+        return pagesLikedData.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        print("in tableview function")
+        let cell = tableView.dequeueReusableCellWithIdentifier("FBDataCell", forIndexPath: indexPath)
 
-        // Configure the cell...
-
+        let dataItem = pagesLikedData[indexPath.row]
+        
+        cell.textLabel!.text = dataItem.pageLiked
+        print("added cell info")
         return cell
     }
-    */
-
+    
+    func fetchData() {
+        let dataFetch  = NSFetchRequest(entityName: "FbData")
+        do {
+            let fetchResults = try self.managedObjectContext.executeFetchRequest(dataFetch) as! [FbData]
+            pagesLikedData = fetchResults
+            //print(fetchResults)
+            //print("above is fetched results")
+        }   catch let error as NSError {
+            print("Fetch failed: \(error.localizedDescription)")
+        }
+    }
+    
+    
+    
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

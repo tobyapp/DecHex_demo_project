@@ -34,6 +34,7 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
             // already logged in, display button and perform segue to different view controller
             displayFBButton()
             print("already logged in")
+            facebookData.returnUserData()
             self.performSegueWithIdentifier("moveToHomePage", sender: nil)
         }
         else
@@ -53,6 +54,7 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         
         print("User Logged In") //segue to new view
+        facebookData.returnUserData()
         self.performSegueWithIdentifier("moveToHomePage", sender: nil) //segue once logged into facebook
         
         if ((error) != nil)
