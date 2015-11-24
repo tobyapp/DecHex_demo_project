@@ -13,6 +13,9 @@
 		5226CDBE1C04E4B000A5519A /* FacebookAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226CDBD1C04E4B000A5519A /* FacebookAuth.swift */; };
 		5226CDC01C0507D000A5519A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5226CDBF1C0507D000A5519A /* CoreData.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		5226CDC31C0508B600A5519A /* FacebookUserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5226CDC11C0508B600A5519A /* FacebookUserData.xcdatamodeld */; };
+		5226CDC51C050C7300A5519A /* FacebookDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226CDC41C050C7300A5519A /* FacebookDataTableViewController.swift */; };
+		5226CDCC1C050E3200A5519A /* FbData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226CDCA1C050E3200A5519A /* FbData+CoreDataProperties.swift */; };
+		5226CDCD1C050E3200A5519A /* FbData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226CDCB1C050E3200A5519A /* FbData.swift */; };
 		523257B31C0494340074A9F3 /* FacebokAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523257B21C0494340074A9F3 /* FacebokAuthViewController.swift */; };
 		523257B51C04A0080074A9F3 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523257B41C04A0080074A9F3 /* HomePageViewController.swift */; };
 		52330DA31BF27F4B00DA26AB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52330DA11BF27F4B00DA26AB /* Interface.storyboard */; };
@@ -101,6 +104,9 @@
 		5226CDBD1C04E4B000A5519A /* FacebookAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAuth.swift; sourceTree = "<group>"; };
 		5226CDBF1C0507D000A5519A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5226CDC21C0508B600A5519A /* FacebookUserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FacebookUserData.xcdatamodel; sourceTree = "<group>"; };
+		5226CDC41C050C7300A5519A /* FacebookDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookDataTableViewController.swift; sourceTree = "<group>"; };
+		5226CDCA1C050E3200A5519A /* FbData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FbData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5226CDCB1C050E3200A5519A /* FbData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbData.swift; sourceTree = "<group>"; };
 		523257B11C0492AB0074A9F3 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "DecHex/Bridging-Header.h"; sourceTree = "<group>"; };
 		523257B21C0494340074A9F3 /* FacebokAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebokAuthViewController.swift; sourceTree = "<group>"; };
 		523257B41C04A0080074A9F3 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +201,8 @@
 		528ADAEA1BBD756A000F0C5E = {
 			isa = PBXGroup;
 			children = (
+				5226CDCA1C050E3200A5519A /* FbData+CoreDataProperties.swift */,
+				5226CDCB1C050E3200A5519A /* FbData.swift */,
 				523257B11C0492AB0074A9F3 /* Bridging-Header.h */,
 				528ADAF51BBD756A000F0C5E /* DecHex */,
 				528ADB0A1BBD756A000F0C5E /* DecHexTests */,
@@ -228,6 +236,7 @@
 				5292B7391BC1863100781A85 /* Dec2HexViewController.swift */,
 				520472021BF29ED200D56292 /* SharedSingleton.swift */,
 				528ADAF61BBD756A000F0C5E /* AppDelegate.swift */,
+				5226CDC41C050C7300A5519A /* FacebookDataTableViewController.swift */,
 				5226CDC11C0508B600A5519A /* FacebookUserData.xcdatamodeld */,
 				528ADAFA1BBD756A000F0C5E /* Main.storyboard */,
 				523257B41C04A0080074A9F3 /* HomePageViewController.swift */,
@@ -564,10 +573,13 @@
 				5292B73A1BC1863100781A85 /* Dec2HexViewController.swift in Sources */,
 				5226CDC31C0508B600A5519A /* FacebookUserData.xcdatamodeld in Sources */,
 				5226CDBE1C04E4B000A5519A /* FacebookAuth.swift in Sources */,
+				5226CDCC1C050E3200A5519A /* FbData+CoreDataProperties.swift in Sources */,
+				5226CDC51C050C7300A5519A /* FacebookDataTableViewController.swift in Sources */,
 				523257B51C04A0080074A9F3 /* HomePageViewController.swift in Sources */,
 				528ADAF71BBD756A000F0C5E /* AppDelegate.swift in Sources */,
 				523257B31C0494340074A9F3 /* FacebokAuthViewController.swift in Sources */,
 				528ADB291BBD7DF1000F0C5E /* Hex2DecViewController.swift in Sources */,
+				5226CDCD1C050E3200A5519A /* FbData.swift in Sources */,
 				520472031BF29ED200D56292 /* SharedSingleton.swift in Sources */,
 				528ADB2D1BBD8459000F0C5E /* ConverterBrain.swift in Sources */,
 			);

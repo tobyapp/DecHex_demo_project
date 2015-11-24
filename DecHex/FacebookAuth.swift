@@ -8,12 +8,13 @@
 
 import Foundation
 import SwiftyJSON
-import FBSDKCoreKit
+import CoreData
 
 class FacebookData {
 
     func returnUserData()
     {
+        
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "name, email, friends, likes, picture.type(large)"])
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
@@ -27,27 +28,36 @@ class FacebookData {
             {
                 let json = JSON(result)
                 
-                //get fb user name
-                let name = json["name"].stringValue
-                print("the JSON name is: \(name)")
+//                //get fb user name
+//                let name = json["name"].stringValue
+//                print("the JSON name is: \(name)")
+//                
+//                //get fb email address
+//                let email = json["email"].stringValue
+//                print("the JSON email is: \(email)")
+//                
+//                //get fb friends total count
+//                let friends = json["friends"]["summary"]["total_count"].stringValue
+//                print("the JSON friends is: \(friends)")
+//                
+//                //get fb pages liked
+//                let likes = json["likes"]["data"]
+//                print("\(likes)")
                 
-                //get fb email address
-                let email = json["email"].stringValue
-                print("the JSON email is: \(email)")
-                
-                //get fb friends total count
-                let friends = json["friends"]["summary"]["total_count"].stringValue
-                print("the JSON friends is: \(friends)")
-                
-                //get fb pages liked
-                let likes = json["likes"]["data"]
-                print("\(likes)")
+                let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+                let fbDataStore = NSEntityDescription.insertNewObjectForEntityForName("FbData", inManagedObjectContext: managedObjectContext) as! FbData
 
                 
-                //print liked pages
+                //Populate core data with fb pages liked
                 for (key, subJson) in json["likes"]["data"] {
-                    if let name = subJson["name"].string {
-                        print(name)
+                    if let pageName = subJson["name"].string {
+                        if let pageLiked = subJson["created_time"].string {
+                            fbDataStore.pageLiked = pageName
+                            fbDataStore.likeDate = pageLiked
+                            
+                            //print("name of page:  \(pageName)")
+                            //print("date joined :  \(pageLiked)")
+                        }
                     }
                 }
             }
