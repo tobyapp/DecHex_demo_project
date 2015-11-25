@@ -12,29 +12,11 @@ import CoreData
 class FacebookDataTableViewController: UITableViewController {
     
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-    
-    
     var pagesLikedData = [FbData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         fetchData()
-        print("in super did load")
-        
-        
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        // Retreive the managedObjectContext from AppDelegate
-        
-        
-        // Print it to the console
-        print(managedObjectContext)
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,34 +28,45 @@ class FacebookDataTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1    }
+        return 1
+    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print(self.pagesLikedData.count)
-        print("pagesliked.count     :       \(self.pagesLikedData.count)")
         return self.pagesLikedData.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        print("in tableview function")
-        let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath) as UITableViewCell
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath) //as UITableViewCell
         let dataItem = pagesLikedData[indexPath.row]
-        
-        cell.textLabel!.text = dataItem.pageLiked
-        print("added cell info")
+        cell.textLabel!.text = dataItem.pageLiked!
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let dataItem = pagesLikedData[indexPath.row]
+        print(dataItem.likeDate!)
+
+        let alertController = UIAlertController(title: dataItem.pageLiked!,
+            message: "Liked at: \(dataItem.likeDate!)",
+            preferredStyle: .Alert)
+        let cancelAction    = UIAlertAction(
+            title: "Close",
+            style: UIAlertActionStyle.Destructive,
+            handler: nil)
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+        
     func fetchData() {
         let dataFetch  = NSFetchRequest(entityName: "FbData")
+        let sortDescriptor = NSSortDescriptor(key: "pageLiked", ascending: true)
+        dataFetch.sortDescriptors = [sortDescriptor]
         do {
             let fetchResults = try self.managedObjectContext.executeFetchRequest(dataFetch) as! [FbData]
             pagesLikedData = fetchResults
-            //print(fetchResults)
-            //print("above is fetched results")
         }   catch let error as NSError {
             print("Fetch failed: \(error.localizedDescription)")
         }

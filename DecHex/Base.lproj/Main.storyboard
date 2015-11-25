@@ -40,7 +40,7 @@
                                     <constraint firstAttribute="width" constant="240" id="bOn-P0-NZ4"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3s7-9F-0f3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3s7-9F-0f3">
                                 <rect key="frame" x="249" y="285" width="103" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Facebook Data"/>
@@ -52,6 +52,8 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="3s7-9F-0f3" firstAttribute="centerX" secondItem="lQR-K6-PhE" secondAttribute="centerX" id="9YQ-kh-Lcv"/>
+                            <constraint firstItem="3s7-9F-0f3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ATm-nS-fCH"/>
                             <constraint firstItem="m1g-dx-l11" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GdS-LQ-n0r"/>
                             <constraint firstItem="abI-VW-sYi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="183" id="Q7s-WA-qRb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lQR-K6-PhE" secondAttribute="bottom" constant="204" id="TlP-M8-jec"/>

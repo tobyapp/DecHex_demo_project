@@ -51,7 +51,7 @@ class FacebookData {
 
                 let moc = self.managedObjectContext
                 //Populate core data with fb pages liked
-                for (key, subJson) in json["likes"]["data"] {
+                for (_, subJson) in json["likes"]["data"] {
                     if let pageLikedName = subJson["name"].string {
                         if let pageLikedDate = subJson["created_time"].string {
                             FbData.createInManagedObjectContext(moc, likeDate: pageLikedDate, pageLiked: pageLikedName)
