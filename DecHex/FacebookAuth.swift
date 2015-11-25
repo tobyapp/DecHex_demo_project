@@ -11,6 +11,8 @@ import SwiftyJSON
 import CoreData
 
 class FacebookData {
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
     func returnUserData()
     {
@@ -44,19 +46,18 @@ class FacebookData {
 //                let likes = json["likes"]["data"]
 //                print("\(likes)")
                 
-                let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-                let fbDataStore = NSEntityDescription.insertNewObjectForEntityForName("FbData", inManagedObjectContext: managedObjectContext) as! FbData
+//                let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+//                let fbDataStore = NSEntityDescription.insertNewObjectForEntityForName("FbData", inManagedObjectContext: managedObjectContext) as! FbData
 
-                
+                let moc = self.managedObjectContext
                 //Populate core data with fb pages liked
                 for (key, subJson) in json["likes"]["data"] {
-                    if let pageName = subJson["name"].string {
-                        if let pageLiked = subJson["created_time"].string {
-                            fbDataStore.pageLiked = pageName
-                            fbDataStore.likeDate = pageLiked
-                            //print(fbDataStore.pageLiked)
-                            //print("name of page:  \(pageName)")
-                            //print("date joined :  \(pageLiked)")
+                    if let pageLikedName = subJson["name"].string {
+                        if let pageLikedDate = subJson["created_time"].string {
+                            FbData.createInManagedObjectContext(moc, likeDate: pageLikedDate, pageLiked: pageLikedName)
+                           // print("itemTitle is : \(pageLikedDate)   and    itemText is : \(pageLikedName)")
+
+                        
                         }
                     }
                 }

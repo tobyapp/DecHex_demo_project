@@ -12,6 +12,13 @@ import CoreData
 
 class FbData: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
-
+    class func createInManagedObjectContext(moc: NSManagedObjectContext, likeDate: String, pageLiked: String) -> FbData {
+        
+        let newItem = NSEntityDescription.insertNewObjectForEntityForName("FbData", inManagedObjectContext: moc) as! FbData
+        newItem.likeDate = likeDate
+        newItem.pageLiked = pageLiked
+        
+        return newItem
+    }
+    
 }

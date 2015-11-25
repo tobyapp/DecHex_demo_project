@@ -46,19 +46,19 @@ class FacebookDataTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+        return 1    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print("pagesliked.count     :       \(pagesLikedData.count)")
-        return pagesLikedData.count
+        print(self.pagesLikedData.count)
+        print("pagesliked.count     :       \(self.pagesLikedData.count)")
+        return self.pagesLikedData.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         print("in tableview function")
-        let cell = tableView.dequeueReusableCellWithIdentifier("FBDataCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath) as UITableViewCell
 
         let dataItem = pagesLikedData[indexPath.row]
         
